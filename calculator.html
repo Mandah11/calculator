@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="scripts.css" />
+  </head>
+  <body>
+    <script>
+      // let symbol = "";
+      // let value1 = "";
+      // let value2 = "";
+
+      const container0 = document.createElement("div");
+      container0.classList.add("container0");
+
+      const container = document.createElement("button");
+      container.classList.add("container");
+
+      const tab = document.createElement("div");
+      tab.classList.add("tab");
+      const tab2 = document.createElement("div");
+      tab2.classList.add("tab2");
+      const tab3 = document.createElement("div");
+      tab3.classList.add("tab3");
+      const button = document.createElement("button");
+      button.classList.add("button");
+      button.innerText = "AC";
+      function clickAC() {
+        tab.innerText = "";
+      }
+      button.onclick = clickAC;
+      const button1 = document.createElement("button");
+      button1.classList.add("button");
+      button1.innerText = "DEL";
+      function clickdel() {
+        tab.innerText = tab.innerText.substring(0, tab.innerText.length - 1);
+      }
+      button1.onclick = clickdel;
+      const button2 = document.createElement("button");
+      button2.classList.add("button");
+      button2.innerText = "%";
+      function clickpercent() {
+        tab.innerText += "%";
+      }
+      button2.onclick = clickpercent;
+      const button3 = document.createElement("button");
+      button3.classList.add("button1");
+      button3.innerText = "/";
+      function clickp() {
+        tab.innerText += "/";
+      }
+      button3.onclick = clickp;
+      const tab4 = document.createElement("div");
+      tab4.classList.add("tab3");
+      const button0 = document.createElement("button");
+      button0.classList.add("button");
+      button0.innerText = "7";
+      function clickseven() {
+        tab.innerText += "7";
+      }
+      button0.onclick = clickseven;
+      const button11 = document.createElement("button");
+      button11.classList.add("button");
+      button11.innerText = "8";
+      function clickeight() {
+        tab.innerText += "8";
+      }
+      button11.onclick = clickeight;
+      const button22 = document.createElement("button");
+      button22.classList.add("button");
+      button22.innerText = "9";
+      function clicknine() {
+        tab.innerText += "9";
+      }
+      button22.onclick = clicknine;
+      const button33 = document.createElement("button");
+      button33.classList.add("button1");
+      button33.innerText = "* ";
+      function clickmulti() {
+        tab.innerText += "*";
+      }
+      button33.onclick = clickmulti;
+
+      const tab5 = document.createElement("div");
+      tab5.classList.add("tab3");
+      const button00 = document.createElement("button");
+      button00.classList.add("button");
+      button00.innerText = "4";
+      function clickfour() {
+        tab.innerText += "4";
+      }
+      button00.onclick = clickfour;
+      const button12 = document.createElement("button");
+      button12.classList.add("button");
+      button12.innerText = "5";
+      function clickfive() {
+        tab.innerText += "5";
+        // value2 += "5";
+      }
+      button12.onclick = clickfive;
+      const button21 = document.createElement("button");
+      button21.classList.add("button");
+      button21.innerText = "6";
+      function clicksix() {
+        tab.innerText += "6";
+      }
+      button21.onclick = clicksix;
+      const button31 = document.createElement("button");
+      button31.classList.add("button1");
+      button31.innerText = "-";
+      function clickless() {
+        // value1 = tab.innerText;
+        // value2 = "";
+        tab.innerText += "-";
+        // symbol = "-";
+      }
+      button31.onclick = clickless;
+
+      const tab6 = document.createElement("div");
+      tab6.classList.add("tab3");
+      const button9 = document.createElement("button");
+      button9.classList.add("button");
+      button9.innerText = "1";
+      function clickOne() {
+        tab.innerText += "1";
+      }
+      button9.onclick = clickOne;
+      const button8 = document.createElement("button");
+      button8.classList.add("button");
+      button8.innerText = "2";
+      function clicktwo() {
+        tab.innerText += "2";
+      }
+      button8.onclick = clicktwo;
+      const button7 = document.createElement("button");
+      button7.classList.add("button");
+      button7.innerText = "3  ";
+      function clickthree() {
+        tab.innerText += "3";
+      }
+      button7.onclick = clickthree;
+      const button6 = document.createElement("button");
+      button6.classList.add("button1");
+      button6.innerText = "+";
+      function clickplus() {
+        tab.innerText += "+";
+      }
+      button6.onclick = clickplus;
+
+      const tab7 = document.createElement("div");
+      tab7.classList.add("tab3");
+      const button5 = document.createElement("button");
+      button5.classList.add("button2");
+      button5.innerText = "0";
+      function clickzero() {
+        tab.innerText += "0";
+      }
+      button5.onclick = clickzero;
+      const button19 = document.createElement("button");
+      button19.classList.add("button");
+      button19.innerText = ". ";
+      function clickdot() {
+        tab.innerText += ".";
+      }
+      button19.onclick = clickdot;
+      const button39 = document.createElement("button");
+      button39.classList.add("button1");
+      button39.innerText = "=";
+
+      // function clickequal() {
+      //   console.log(tab.innerText);
+
+      //   result = eval(tab.innerText);
+      //   tab.innerText = result;
+      // }
+
+      // function clickequal() {
+      //   console.log(tab.innerText);
+      //   console.log(value1, symbol, value2);
+      // }
+
+      let symbol = "";
+      let value1 = "";
+      let value2 = "";
+
+      function clickequal() {
+        console.log(tab.innerText);
+        let inputValue = tab.innerText;
+        let index = 0;
+        for (let i = 0; i < inputValue.length; i++) {
+          if (
+            inputValue[i] == "+" ||
+            inputValue[i] == "-" ||
+            inputValue[i] == "/" ||
+            inputValue[i] == "*"
+          ) {
+            symbol = inputValue[i];
+            index = i;
+          }
+        }
+        for (let i = 0; i < index; i++) {
+          value1 += inputValue[i];
+        }
+        for (let i = index + 1; i < inputValue.length; i++) {
+          value2 += inputValue[i];
+        }
+        console.log(symbol, value1, value2);
+
+        let result;
+        if (symbol == "+") {
+          result = Number(value1) + Number(value2);
+          tab.innerText = result;
+        }
+        if (symbol == "-") {
+          result = Number(value1) - Number(value2);
+          tab.innerText = result;
+        }
+        if (symbol == "/") {
+          result = Number(value1) / Number(value2);
+          tab.innerText = result;
+        }
+
+        if (symbol == "*") {
+          result = Number(value1) * Number(value2);
+          tab.innerText = result;
+        }
+        symbol = "";
+        value1 = "";
+        value2 = "";
+        // let result = ` ${value1} + ${value2} = ${
+        //   Number(value1) + Number(value2)
+        // }`;
+
+        // console.log(result);
+        // let result = ` ${value1} + ${value2} = ${value1 + value2}`;
+      }
+      button39.onclick = clickequal;
+      tab7.appendChild(button5);
+      tab7.appendChild(button19);
+      tab7.appendChild(button39);
+      tab6.appendChild(button9);
+      tab6.appendChild(button8);
+      tab6.appendChild(button7);
+      tab6.appendChild(button6);
+      tab5.appendChild(button00);
+      tab5.appendChild(button12);
+      tab5.appendChild(button21);
+      tab5.appendChild(button31);
+      tab4.appendChild(button0);
+      tab4.appendChild(button11);
+      tab4.appendChild(button22);
+      tab4.appendChild(button33);
+      tab3.appendChild(button);
+      tab3.appendChild(button1);
+      tab3.appendChild(button2);
+      tab3.appendChild(button3);
+      tab2.appendChild(tab3);
+      tab2.appendChild(tab4);
+      tab2.appendChild(tab5);
+      tab2.appendChild(tab6);
+      tab2.appendChild(tab7);
+      container.appendChild(tab);
+      container.appendChild(tab2);
+      container0.appendChild(container);
+      document.body.appendChild(container0);
+    </script>
+  </body>
+</html>
